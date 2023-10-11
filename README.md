@@ -41,7 +41,7 @@ To get started with this project, please follow these steps:
    ```
 
 5. Obtain a Google API Key:
-   - To use the PALM Google model for text conversion, you will need to obtain an API key from Google. You can request the api key from (here)[https://makersuite.google.com/waitlist]
+   - To use the PALM Google model for text conversion, you will need to obtain an API key from Google. You can request the api key from [here](https://makersuite.google.com/waitlist)
 
 6. Store the API key in a `config.py` file located inside the `notebooks` folder. The file should look like this:
    ```python
