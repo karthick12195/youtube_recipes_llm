@@ -7,8 +7,8 @@ Welcome to the **YouTube Recipes LLM** project repository! This project is desig
 - **youtube_recipes_llm** is a Python project that enables you to extract data from YouTube captions and transform it into a more structured format, specifically, ingredient lists and recipe instructions.
 
 - The project consists of two main components, each residing in its own Jupyter Notebook:
-  1. **Download Captions**: In this notebook, you will find the code to download captions from YouTube videos and save the results to a CSV file located in the `data/recipes.csv` directory.
-  2. **Convert to Recipe Cards**: The second notebook reads the data from `data/recipes.csv` and utilizes the PALM Google model to convert the text into recipe cards.
+  1. **yt_data.ipynb**: In this notebook, you will find the code to download captions from YouTube videos and save the results to a CSV file located in the `data/recipes.csv` directory.
+  2. **palm_model.ipynb**: The second notebook reads the data from `data/recipes.csv` and utilizes the PALM Google model to convert the text into recipe cards.
 
 ## Setup
 
@@ -41,7 +41,7 @@ To get started with this project, please follow these steps:
    ```
 
 5. Obtain a Google API Key:
-   - To use the PALM Google model for text conversion, you will need to obtain an API key from Google. You can do this by following Google's API key creation process.
+   - To use the PALM Google model for text conversion, you will need to obtain an API key from Google. You can request the api key from (here)[https://makersuite.google.com/waitlist]
 
 6. Store the API key in a `config.py` file located inside the `notebooks` folder. The file should look like this:
    ```python
@@ -50,9 +50,9 @@ To get started with this project, please follow these steps:
 
 ## Usage
 
-1. **Download Captions**: Open the "Download Captions" Jupyter Notebook in the `notebooks` folder. Follow the instructions in the notebook to download captions from YouTube videos of the specific channel. The results will be saved to the `data/recipes.csv` file.
+1. **yt_data.ipynb**: Open the "yt_data.ipynb" Jupyter Notebook in the `notebooks` folder. Follow the instructions in the notebook to download captions from YouTube videos of the specific channel. The results will be saved to the `data/recipes.csv` file.
 
-2. **Convert to Recipe Cards**: Once you have the captions data in `data/recipes.csv`, open the "Convert to Recipe Cards" Jupyter Notebook in the `notebooks` folder. Run the code to convert the captions into recipe cards using the PALM Google model.
+2. **palm_model.ipynb**: Once you have the captions data in `data/recipes.csv`, open the "Convert to Recipe Cards" Jupyter Notebook in the `notebooks` folder. Run the code to convert the captions into recipe cards using the PALM Google model.
 
 ## Contributions
 
