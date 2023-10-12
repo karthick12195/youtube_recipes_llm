@@ -2,6 +2,10 @@
 
 Welcome to the **YouTube Recipes LLM** project repository! This project is designed to help you download captions from YouTube videos of a particular channel and convert those captions into ingredient lists and recipe instructions. This repository contains the necessary code and data to achieve this goal.
 
+## Web Application
+A streamlit web app was created to search and lookup recipes created with LLM. The app can be accessed here [here](https://youtuberecipesllm.streamlit.app/)
+
+
 ## Project Overview
 
 - **youtube_recipes_llm** is a Python project that enables you to extract data from YouTube captions and transform it into a more structured format, specifically, ingredient lists and recipe instructions.
