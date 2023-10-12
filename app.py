@@ -16,5 +16,6 @@ else:
     df_filtered = df
 
 st.subheader(df_filtered['title'].values[0])
+st.markdown("[YouTube Link](https://www.youtube.com/watch?v={})".format(df_filtered['video_id'].values[0]))
 st.image(Image.open(BytesIO(requests.get(df_filtered['thumbnail'].values[0]).content)))
 st.markdown(df_filtered['ingredients_recipe'].values[0])
