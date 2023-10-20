@@ -5,8 +5,17 @@ from PIL import Image
 import requests
 from io import BytesIO
 
-st.title('Ranveer Brar Recipes from YouTube')
-df = pd.read_csv('data/recipe_with_instructions.csv')
+st.title('Recipes from YouTube')
+
+channel_selection = st.selectbox("Choose YouTube Channel", ['Ranveer Brar', 'Venkatesh Bhat'], index=None)
+
+if channel_selection == 'Ranveer Brar':
+    df = pd.read_csv('data/recipe_with_instructions.csv')
+else:
+    df = pd.read_csv('data/recipe_with_instructions_vb.csv')
+    df = df[~df['ingredients'].isna()]
+    df['title'] = df['title'].str.extract(r"Venkatesh Bhat's Idhayam Thotta Samayal - Venkatesh Bhat makes (.*)")
+
 
 recipe_selection = st.selectbox("Choose a recipe from below to see ingredients and instructions", df['title'].drop_duplicates(), placeholder="Search recipes...", index=None)
 
