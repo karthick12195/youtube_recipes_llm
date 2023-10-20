@@ -13,7 +13,8 @@ if channel_selection == 'Ranveer Brar':
     df = pd.read_csv('data/recipe_with_instructions.csv')
 else:
     df = pd.read_csv('data/recipe_with_instructions_vb.csv')
-    df = df[~df['ingredients'].isna()]
+    df = df[~(df['transcript'].str.contains('foreign'))]
+    df = df[~df['recipe'].isna()]
     df['title'] = df['title'].str.extract(r"Venkatesh Bhat's Idhayam Thotta Samayal - Venkatesh Bhat makes (.*)")
 
 
